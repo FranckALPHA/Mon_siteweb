@@ -1,0 +1,316 @@
+/* Font */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #000000;
+  }
+  
+  .navbar-brand {
+    color: #00ffcc !important;
+    font-weight: bold;
+  }
+  
+  /* Bouton lumineux */
+  .btn-glow {
+    margin-top: 20px;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    background: transparent;
+    transition: 0.3s ease;
+  }
+  
+  .btn-glow:hover {
+    background: #00ffcc;
+    color: #000000;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+  }
+  
+  /* Liens sociaux */
+  footer a {
+    color: #00ffcc;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+/* Effet de survol sur les liens de la navbar */
+.navbar-nav .nav-link {
+  transition: background-color 0.3s, color 0.3s; /* Transition douce pour l'effet */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #555; /* Couleur de fond au survol */
+  color: #fff; /* Couleur du texte au survol */
+}
+
+/*nav bar*/
+/* Effet sur les éléments de la navbar */
+.navbar-nav .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease; /* Transition pour la couleur du texte */
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s, left 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 100%; /* Souligné qui s'étend sur toute la largeur */
+    left: 0;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #00d1b2; /* Couleur de texte au survol */
+    transform: scale(1.1); /* Légère animation de zoom sur le texte */
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #00d1b2; /* Couleur pour l'élément actif */
+  }
+
+
+
+
+  
+/* Style pour la section Hero */
+.hero {
+    background: linear-gradient(45deg, #08848877, #2575fc); /* Gradient pour un fond dynamique */
+    color: #fff;
+    padding: 100px 0;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Aligner le texte et l'image côte à côte */
+    gap: 30px;
+  }
+  
+  .text-content {
+    max-width: 500px; /* Limite de la largeur du texte */
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero .btn-glow {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #00d1b2; /* Couleur de fond pour le bouton */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 209, 178, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .hero .btn-glow:hover {
+    background-color: #ff5c8d; /* Changer la couleur au survol */
+    box-shadow: 0 0 25px rgba(255, 92, 141, 0.8);
+    transform: scale(1.05); /* Légère animation de zoom */
+  }
+  
+  /* Style pour l'image dans la section Hero */
+  .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  
+
+
+
+  #projets .card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  #projets .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  #projets h2 {
+    color: #00fff7;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-content {
+      order: -1; /* fait passer l'image au-dessus */
+    }
+  
+    .hero-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  
+
+
+  #propos {
+    background-color: #c1c1c4;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #propos h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .about-text {
+    background-color: #ffffff; /* Fond blanc pour le texte */
+    padding: 30px; /* Ajout de padding pour espacer le texte */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet de profondeur */
+    margin-top: 20px; /* Espacement du texte */
+    text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .about-text h5 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  #propos ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  #propos ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  #propos ul li i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  #propos img {
+    width: 350px; /* Augmentation de la largeur de l'image */
+    height: 350px; /* Augmentation de la hauteur de l'image */
+    object-fit: cover; /* Garder l'image bien proportionnée sans distorsion */
+    border-radius: 50%; /* Pour donner une forme ronde à l'image */
+    margin-bottom: 20px; /* Espacement sous l'image */
+  }
+  
+  
+  @media (max-width: 767px) {
+    .about-text {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    #propos h2 {
+      font-size: 2rem;
+    }
+  
+    .col-md-4 img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  
+    .row {
+      text-align: center;
+    }
+  
+    /* Centrer l'image dans la section */
+    .col-md-4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .col-md-8 {
+      text-align: center;
+      padding: 0;
+    }
+  
+    /* Empêcher le texte de s'écraser sur l'image */
+    .about-text {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
